@@ -1,10 +1,13 @@
 package org.seckill.dto;
 
+import java.io.Serializable;
+
 /**
  * 暴露秒杀地址DTO
  * Created by helei on 2018-12-19.
  */
-public class Exposer {
+public class Exposer implements Serializable{
+    private static final long serialVersionUID = 1L;
 
     //是否开启秒杀
     private boolean exposed;
