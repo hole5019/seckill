@@ -74,7 +74,9 @@ public class SeckillController {
                                                    @CookieValue(value = "killPhone",required = false) Long phone){
         SeckillResult<SeckillExecution> result = null;
         try {
-            SeckillExecution execution = seckillService.executeSeckill(seckillId,phone,md5);
+//            SeckillExecution execution = seckillService.executeSeckill(seckillId,phone,md5);
+            //改用存储过程
+            SeckillExecution execution = seckillService.executeSeckillProcedure(seckillId,phone,md5);
             return new SeckillResult<SeckillExecution>(true,execution);
         }catch (RepeatKillException e){
             logger.error(e.getMessage(),e);
