@@ -8,7 +8,7 @@ public enum SeckillStatEnum {
     END(0,"秒杀结束"),
     REPEAT_KILL(-1,"重复秒杀"),
     DATA_REWIETE(-3,"数据篡改"),
-    INNER_ERROR(-4,"内部错误");
+    INNER_ERROR(-2,"系统异常");
 
     private int state;
 
